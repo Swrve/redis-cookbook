@@ -1,4 +1,4 @@
-set[:redis][:version]   = "2.4.16"
+default[:redis][:version]   = "2.4.16"
 set[:redis][:dir]       = "redis-#{redis.version}"
 set[:redis][:source]    = "http://redis.googlecode.com/files/#{redis.dir}.tar.gz"
 default[:redis][:srcdir]    = "/usr/local/src"
@@ -207,6 +207,7 @@ default[:redis][:rename_command] = false
 # Don't need to change anything, the defaults are fine.
 # Add config variables as required.
 
+default[:redis][:appendonly] = "no"
 
 
 ########################################################################## SLOW LOG
